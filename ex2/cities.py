@@ -6,19 +6,22 @@ cities = [
 ]
 
 class City:
-    def __init__(self, cities):
+    def __init__(self, data_dico):
         self.name = None
-        self.departement = None
+        self.department = None
         self.country = None
         self.population = None
         self.mayor = None
         self.capital = None
-        for key, value in cities.items():
+        self.hydratation(data_dico)
+
+    def hydratation(self, data_dico):
+        for key, value in data_dico.items():
             if hasattr(self, key):
                 setattr(self, key, value)
 
     def show_information(self):
        info = "=======================\n name: {}\n departement: {}\n country: {}\n population: {}\n mayor: {}\n capital: {}".format(self.name,
-        self.departement, self.country, self.population, self.mayor, self.capital)
+        self.department, self.country, self.population, self.mayor, self.capital)
        print(info) 
             

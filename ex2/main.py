@@ -3,7 +3,7 @@
 from cities import *
 
 
-for i in cities:
-    i=City(i)
+for data_dico in cities:
+    i=City(data_dico)
     City.show_information(i)
 
