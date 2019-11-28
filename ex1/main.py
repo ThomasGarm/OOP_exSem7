@@ -2,17 +2,20 @@
 
 from city import *
 
-Lille = city("Lille", 59)
-Lyon = city("Lyon", 69)
-Paris = city("Paris", 92)
-Strasbourg = city("Strasbourg", 67)
-Brest = city("Brest", 29)
-Roubaix = city("Roubaix", 59100)
+Lille = City("Lille", 59)
+Lyon = City("Lyon", 69)
+Paris = City("Paris", 92)
+Strasbourg = City("Strasbourg", 67)
+Brest = City("Brest", 29)
+Roubaix = City("Roubaix", 59100)
 
 print(Lille.show_location())
 print(Lyon.show_location())
 print(Paris.show_location())
 print(Strasbourg.show_location())
 print(Brest.show_location())
+print(Roubaix.show_location())
 
-print(Roubaix.change_location())
+
+print(Brest.change_location("Dunkerque", 59)) #None appear
+print(Brest.show_location())
