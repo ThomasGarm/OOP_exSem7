@@ -7,26 +7,18 @@ from books_list import *
 
 class Library():
     
-    def __init__(self, books_list):
-        self.title = None
-        self.pages = None
-        for i in books_list:
-            if hasattr(self, i):
-                setattr(self, i)
-        
-
+    def __init__(self):
+        self.books_list = []
         
 
     def add_book(self, book):
-        book = books_list
-        for i in book:
-            title = i[0]
-        for j in i:
-            pages = j[0::]
-        return title, pages
+        self.books_list.append(book)
 
         
 
     def get_book(self, title):
-        title = input("Choose your book")
-        return title
+        title = input("choose a book")
+        for title in self.books_list :
+            if title == Book.title :
+                return book
+        return None

@@ -1,13 +1,16 @@
 # coding: utf8
 
+
 class Reader():
     """"""
     def __init__(self):
-        pass
+        self.book = None
+        self.title = None
+        self.pages = None
+
 
     def borrow_book(self):
-        """"""
-        pass
+        get_book()
 
     def go_to_page(self):
         """"""
