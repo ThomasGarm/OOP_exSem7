@@ -8,17 +8,16 @@ from books_list import *
 class Library():
     
     def __init__(self):
-        self.books_list = []
+        self.books = []
         
 
     def add_book(self, book):
-        self.books_list.append(book)
+        self.books.append(book)
 
         
 
     def get_book(self, title):
-        title = input("choose a book")
-        for title in self.books_list :
-            if title == Book.title :
-                return book
-        return None
+        for book in self.books:
+            if title == book.title :
+               return book
+        raise Exception("not here")

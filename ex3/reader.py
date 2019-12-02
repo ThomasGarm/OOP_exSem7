@@ -1,33 +1,36 @@
 # coding: utf8
 
-
 class Reader():
     """"""
     def __init__(self):
         self.book = None
-        self.title = None
-        self.pages = None
+        
+    def borrow_book(self,library, title):
+        try:
+            self.book = library.get_book(title)
+        except Exception as e:
+            print(e)
 
-
-    def borrow_book(self):
-        get_book()
-
-    def go_to_page(self):
-        """"""
-        pass
+    def go_to_page(self, page_number):
+        if page_number < len(self.book.pages):
+            self.book.current_page = page_number
 
     def next_page(self):
-        """"""
-        pass
+        if self.book.current_page < len(self.book.pages) - 1:
+            self.book.current_page += 1
+            return True
+        else:
+            return False
 
     def previous_page(self):
-        """"""
-        pass
+        if self.book.current_page > 0:
+            self.book.current_page -= 1
 
     def read(self):
-        """"""
-        pass
+        print(self.book.pages[self.book.current_page])
 
     def read_book(self):
-        """"""
-        pass
+        if self.book:
+            while self.next_page():
+                self.read()
+            self.go_to_page(-1)

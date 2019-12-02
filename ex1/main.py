@@ -17,5 +17,5 @@ print(Brest.show_location())
 print(Roubaix.show_location())
 
 
-print(Brest.change_location("Dunkerque", 59)) #None appear
-print(Brest.show_location())
+print(Paris.change_location("Dunkerque", 59)) #None appear
+print(Paris.show_location())

@@ -23,5 +23,4 @@ class City:
     def show_information(self):
        info = "=======================\n name: {}\n departement: {}\n country: {}\n population: {}\n mayor: {}\n capital: {}".format(self.name,
         self.department, self.country, self.population, self.mayor, self.capital)
-       print(info) 
-            
+       print(info)      
